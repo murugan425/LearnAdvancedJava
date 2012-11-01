@@ -1,0 +1,21 @@
+Murugan Created this Program for testing purpose.............,
+
+listing 5
+try { 
+ 
+  int count; 
+  char chrs[] = new char[80]; 
+ 
+  // Read the file one buffer at a time. 
+  do { 
+    count = fr.read(chrs); 
+    for(int i=0; i < count; i++) 
+      System.out.print(chrs[i]); 
+  } while(count != -1); 
+ 
+} catch(IOException exc) { 
+  System.out.println("Error Reading File"); 
+}
+
+
+
