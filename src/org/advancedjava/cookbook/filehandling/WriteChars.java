@@ -6,6 +6,8 @@ package org.advancedjava.cookbook.filehandling;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author Murugan Nagarajan
@@ -29,16 +31,21 @@ public class WriteChars {
 		String[] mailIds = {"Murugan murugan425@gmail.com",
 							"Mani mani.eie611@gmail.com",
 							"Shiva shiva.it13@gmail.com" };
+		Pattern emailPat = Pattern.compile("[\\w+\\.]+@gmail\\.com");		
 		try {
-			fw = new FileWriter(new File("E:\\ProgramData\\Git_Repository\\murugan425_git_V0.0\\LearnJavaBasics\\src\\org\\java\\cookbook\\filehandling\\MyDetails.txt"), true);
+			fw = new FileWriter(new File("E:\\ProgramData\\Local_Repository\\murugan425_local_v0.0\\LearnAdvancedJava\\src\\org\\advancedjava\\cookbook\\filehandling\\MyDetails.txt"));
 		} catch (IOException e) {
 			System.err.println("Error while creating a new file for adding the mail details");
 			return;
 		}
-		try {
+		try {			
 			for (String contactEmail : mailIds) {
-				fw.write(contactEmail);
-				fw.write("\n");
+				Matcher emailMatch = emailPat.matcher(contactEmail);				
+				if(emailMatch.find()) {
+					System.out.println(emailMatch.group());
+					fw.write(emailMatch.group());
+					fw.write("\n");
+				}
 			}
 			fw.write("\n\n\n");
 		} catch (IOException e) {

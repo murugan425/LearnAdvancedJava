@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+mURUGAN cREATED THIS pROGRAM FOR TESTING PURPOSE.............,
+
+LISTING 5
+TRY { 
+ 
+  INT COUNT; 
+  CHAR CHRS[] = NEW CHAR[80]; 
+ 
+  // rEAD THE FILE ONE BUFFER AT A TIME. 
+  DO { 
+    COUNT = FR.READ(CHRS); 
+    FOR(INT I=0; I < COUNT; I++) 
+      sYSTEM.OUT.PRINT(CHRS[I]); 
+  } WHILE(COUNT != -1); 
+ 
+} CATCH(ioeXCEPTION EXC) { 
+  sYSTEM.OUT.PRINTLN("eRROR rEADING fILE"); 
+}
+
+
+
+=======
+mURUGAN cREATED THIS pROGRAM FOR TESTING PURPOSE.............,
+
+LISTING 5
+TRY { 
+ 
+  INT COUNT; 
+  CHAR CHRS[] = NEW CHAR[80]; 
+ 
+  // rEAD THE FILE ONE BUFFER AT A TIME. 
+  DO { 
+    COUNT = FR.READ(CHRS); 
+    FOR(INT I=0; I < COUNT; I++) 
+      sYSTEM.OUT.PRINT(CHRS[I]); 
+  } WHILE(COUNT != -1); 
+ 
+} CATCH(ioeXCEPTION EXC) { 
+  sYSTEM.OUT.PRINTLN("eRROR rEADING fILE"); 
+}
+
+
+
+>>>>>>> 2439e27c2b9ec41befdb54256372a39cb797c861
+=======
+mURUGAN cREATED THIS pROGRAM FOR TESTING PURPOSE.............,
+
+LISTING 5
+TRY { 
+ 
+  INT COUNT; 
+  CHAR CHRS[] = NEW CHAR[80]; 
+ 
+  // rEAD THE FILE ONE BUFFER AT A TIME. 
+  DO { 
+    COUNT = FR.READ(CHRS); 
+    FOR(INT I=0; I < COUNT; I++) 
+      sYSTEM.OUT.PRINT(CHRS[I]); 
+  } WHILE(COUNT != -1); 
+ 
+} CATCH(ioeXCEPTION EXC) { 
+  sYSTEM.OUT.PRINTLN("eRROR rEADING fILE"); 
+}
+
+
+
+>>>>>>> branch 'master' of https://github.com/murugan425/LearnJavaBasics.git
