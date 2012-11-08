@@ -11,14 +11,14 @@ import java.io.FilenameFilter;
  * @author Murugan Nagarajan
  * @created date 03-Nov-2012 / 10:20:52 AM
  */
-class ListClassFiles implements FileFilter {
+class ListTxtFiles implements FileFilter {
 
 	/* (non-Javadoc)
 	 * @see java.io.FileFilter#accept(java.io.File)
 	 */
 	@Override
 	public boolean accept(File f) {
-		if(f.getName().endsWith(".class")) return true;
+		if(f.getName().endsWith(".txt")) return true;
 		return false;
 	}
 }
@@ -70,15 +70,23 @@ public class DirectoryFileLists {
 		
 		System.out.println("\n\nList of Java Source Files:\n");
 		for(File f:filelist) {
-			System.out.println(f.getName());
+			System.out.printf("%-40s\t%-25s\n", f.getName(),f.getParent());			
 		}
 		
-		ListClassFiles listclassf = new ListClassFiles();  
+		ListTxtFiles listclassf = new ListTxtFiles();  
 		filelist = dir.listFiles(listclassf);
 		
 		System.out.println("\n\nList of Class Files:\n");
 		for(File f:filelist) {
 			System.out.println(f.getName());
 		}
+		
+		File fil = new File("E:/ProgramData/Local_Repository\\murugan425_local_v0.0\\LearnAdvancedJava\\src\\org\\advancedjava\\cookbook\\filehandling\\testfiles\\test.txt");
+		System.out.println("\n\n"+fil.getAbsolutePath());
+		String absolutePath = fil.getAbsolutePath();
+		String filePath = absolutePath.
+			    substring(0,absolutePath.lastIndexOf(File.separator));
+		System.out.println(filePath);
+		
 	}
 }
