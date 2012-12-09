@@ -9,12 +9,12 @@ import java.util.Formatter;
  * @author Murugan Nagarajan
  * @created date 08-Nov-2012 / 7:50:06 PM
  */
-public class Class1_NumericFormats {
+public class NumericFormats {
 
 	/**
 	 * 
 	 */
-	public Class1_NumericFormats() {
+	public NumericFormats() {
 	}
 
 	/**
@@ -33,12 +33,19 @@ public class Class1_NumericFormats {
 		fmt.format("Default Precision: %f\n", val1);
 		fmt.format("Default Precision: %f\n", val2);
 		fmt.format("Default Precision: %f\n", val3);
-		
+		//No of decimals..,
 		fmt.format("Default Precision: %.2f\n", val1);
 		fmt.format("Default Precision: %010.5f\n", val2);
 		fmt.format("Default Precision: %.0f\n", val3); 
-		
+		//Group Separators..,
+		fmt.format("%d\n",1234567989);
+		fmt.format("%,d\n",1234567989);
+		//Positive value
+		fmt.format("%+,d\n",1234567989);
+		fmt.format("%+,f\n",-123.456798998888);
+		fmt.format("%+,g\n",-123.45679899888876798748);
+		fmt.format("%(.20f\n",-123.45679899888876798748);
 		System.out.println(fmt);
+		System.out.println("");
 		}
-
 }
